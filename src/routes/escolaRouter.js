@@ -1,9 +1,9 @@
 const router = require('express').Router()
 const EscolaController = require('../controller/escolaController')
 
-router.post('/insertEscola', EscolaController.insertEscola)
-router.put('/updateEscola', EscolaController.updateEscola)
-router.delete('/deleteEscola', EscolaController.deleteEscola)
-router.get('/selectEscolas', EscolaController.selectEscolas)
-router.get('/selectEscola', EscolaController.selectEscola)
+router.post('/insert-escola', EscolaController.insertEscola)
+router.put('/update-escola/:id', EscolaController.updateEscola)
+router.delete('/delete-escola/:id', EscolaController.deleteEscola)
+router.get('/select-escolas', EscolaController.selectEscolas)
+router.get('/select-escola/:id', EscolaController.selectEscola)
 module.exports = router
