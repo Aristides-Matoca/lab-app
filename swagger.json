@@ -38,10 +38,11 @@
               "message": "Escola inserida com sucesso"
             },
             "404": {
-                "error": "Erro ao inserir a escola"
-            },
-            "401": {
-                "error": "error"
+                "error": [
+                    "Provincia invalida",
+                    "Erro ao inserir a escola",
+                    "error"
+                ]
             }
           }
         }
