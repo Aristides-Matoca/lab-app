@@ -54,7 +54,7 @@ bun dev
 |   |-- controller/
 |   |-- routes/
 |   |-- app.js
-|-- escola.bd
+|-- escolas.bd
 |-- package.json
 |-- province.json
 |-- README.md
