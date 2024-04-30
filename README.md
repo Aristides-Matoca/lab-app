@@ -1,4 +1,4 @@
-# Lab-app 1.0.0
+# Lab-app 1.0.0 by: Aristides Matoca
 #### Back-end API de Gerenciamento de Escolas
 
 ### Tecnologias Utilizadas
@@ -63,6 +63,3 @@ bun dev
 
 
 Abra [http://localhost:5005/api-docs/#/](http://localhost:5005/api-docs/#/) no seu browser para ver a documentação dos endpoints.
-
-
-
