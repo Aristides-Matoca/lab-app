@@ -1,5 +1,6 @@
 const util = require('util')
 const db = require('../config/dbconfig')
+const { error } = require('console')
 const dbAll = util.promisify(db.all).bind(db)
 const dbGet = util.promisify(db.get).bind(db)
 
@@ -36,22 +37,22 @@ class EscolaController {
 
             if (!provincias) {
                 console.log('provincia invalida')
-                callback(`Provincia invalida. escola: ${dados.nome} provincia: ${dados.provincia}`, { error: "Erro" })
+                callback(`Provincia invalida. escola: ${dados.nome} provincia: ${dados.provincia}`)
 
             } else {
                 db.run('INSERT INTO escola (nome, email, salas, provincia) VALUES (?, ?, ?, ?)', [dados.nome, dados.email, dados.salas, dados.provincia], function (err) {
                     if (err) {
                         console.error(err.message)
-                        callback("Erro ao inserir as escolas", { message: err.message })
+                        callback(`Erro ao inserir a ${dados.nome} ${err.message}`)
                     } else {
-                        callback("Escolas inserida com sucesso ", { id: this.lastID })
-                        console.log("Escola inserida com sucesso ", this.lastID )
+                        callback("Escolas inseridas com sucesso ")
+                        console.log(`${dados.nome} inserida com sucesso `, this.lastID )
                     }
                 })
             }
         } catch (error) {
             console.log(error)
-            callback("Erro do servidor", { error: error })
+            callback("Erro do servidor")
         }
     }
 

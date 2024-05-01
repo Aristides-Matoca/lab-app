@@ -14,7 +14,7 @@
 ### Iniciando o Desenvolvimento
 ## Pré-requisitos
 
-    Node.js v18+ instalado
+    Node.js v19+ instalado
     Yarn, npm, pnpm, bun
 
 ## Passos para Executar Localmente
@@ -55,6 +55,7 @@ bun dev
 |   |-- config/
 |   |-- controller/
 |   |-- routes/
+|   |-- service/
 |   |-- app.js
 |-- escolas.bd
 |-- package.json

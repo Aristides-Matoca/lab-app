@@ -10,7 +10,7 @@ router.post('/upload-file', upload.single('file'), (req, res) => {
         res.status(201).json({ message: 'Ficheiro carregado e dados inseridos com sucesso!', results })
 
     }).catch(error => {
-        res.status(500).json({ error });
+        res.status(404).json({ error })
     })
 })
 

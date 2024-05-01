@@ -9,7 +9,7 @@
     "basePath": "/",
     "tags": [
         {
-            "name": "escolas",
+            "name": "Escolas",
             "description": "Operações sobre escolas"
         }
     ],
@@ -78,6 +78,9 @@
                 "responses": {
                     "201": {
                         "description": "message"
+                    },
+                    "400": {
+                        "description": "Nenhum ficheiro carregado."
                     },
                     "404": {
                         "description": "Error"
