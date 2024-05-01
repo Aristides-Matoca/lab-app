@@ -49,6 +49,8 @@ bun dev
 
 ``` bash
 .
+|-- public/
+|   |-- uploads
 |-- src/ 
 |   |-- config/
 |   |-- controller/

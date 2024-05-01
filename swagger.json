@@ -51,6 +51,40 @@
                 }
             }
         },
+        "/upload-file": {
+            "post": {
+                "tags": [
+                    "escolas"
+                ],
+                "summary": "Carregar um Excel com dados das escolas",
+                "description": "Insere todos os dados do Excel à base de dados.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body - form-data - file -> File - choose file",
+                        "description": "O Excel com os dados das escolas que precisam ser inseridas à base de dados",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Escola"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "message"
+                    },
+                    "404": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
         "/select-escolas": {
             "get": {
                 "tags": [
