@@ -50,7 +50,7 @@ bun dev
 ``` bash
 .
 |-- public/
-|   |-- uploads
+|   |-- uploads/
 |-- src/ 
 |   |-- config/
 |   |-- controller/
