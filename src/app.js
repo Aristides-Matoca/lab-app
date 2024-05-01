@@ -4,6 +4,7 @@ const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('../swagger.json')
 const escolaRoute = require('./routes/escolaRouter')
 const uploadRoute = require('./service/uploadExcel')
+// Inserir as provincias na base de dados
 // const insertProvinces = require('./controller/provinceController')
 
 // insertProvinces()
