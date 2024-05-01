@@ -29,6 +29,32 @@ class EscolaController {
         }
     }
 
+    // Inserir escola a partir de um ficheiro excel
+    static async uploadEscola(dados, callback) {
+        try {
+            const provincias = await dbGet('SELECT * FROM provincias WHERE nome=?', [dados.provincia]) // Verifica se a provincia inserida e valida
+
+            if (!provincias) {
+                console.log('provincia invalida')
+                callback(`Provincia invalida. escola: ${dados.nome} provincia: ${dados.provincia}`, { error: "Erro" })
+
+            } else {
+                db.run('INSERT INTO escola (nome, email, salas, provincia) VALUES (?, ?, ?, ?)', [dados.nome, dados.email, dados.salas, dados.provincia], function (err) {
+                    if (err) {
+                        console.error(err.message)
+                        callback("Erro ao inserir as escolas", { message: err.message })
+                    } else {
+                        callback("Escolas inserida com sucesso ", { id: this.lastID })
+                        console.log("Escola inserida com sucesso ", this.lastID )
+                    }
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            callback("Erro do servidor", { error: error })
+        }
+    }
+
     // Atualizar escola
     static async updateEscola(req, res) {
         const id = req.params.id
