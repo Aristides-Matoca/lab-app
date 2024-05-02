@@ -75,3 +75,17 @@ Abra [http://localhost:5005/api-docs/#/](http://localhost:5005/api-docs/#/) no s
 ``` bash
 docker-compose up --build
 ```
+
+### Fazer o pull da imagem
+
+``` bash
+ docker pull aristidesmatoca/lab-app
+```
+
+### Executar a imagem
+
+``` bash
+ docker run -p 80:5005 aristidesmatoca/lab-app:latest
+```
+
+Abra [http://localhost/api-docs/#/](http://localhost/api-docs/#/) no seu browser para ver a documentação dos endpoints.
