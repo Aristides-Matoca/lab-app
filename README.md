@@ -66,3 +66,21 @@ bun dev
 
 
 Abra [http://localhost:5005/api-docs/#/](http://localhost:5005/api-docs/#/) no seu browser para ver a documentação dos endpoints.
+
+
+### Docker
+
+## Dockerizar o backend
+
+``` bash
+docker-compose up --build
+```
+
+## Rodar o container
+
+``` bash
+docker run -dp 127.0.0.1:5005:5005 lab-app-app
+```
+
+
+Abra [http://127.0.0.1:5005/api-docs/#/](http://127.0.0.1:5005/api-docs/#/) no seu browser para ver a documentação dos endpoints
